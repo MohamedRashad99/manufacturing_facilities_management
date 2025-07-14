@@ -1,0 +1,29 @@
+name: manufacturing_facilities_management
+description: "A new Flutter project."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.8.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  onyx_ix:
+    git:
+      url: https://github.com/MohamedRashad99/ONYX_IX.git
+      ref: master
+dependency_overrides:
+  onyx_ix_cutsom_grid:
+    git:
+      url: https://github.com/MohamedRashad99/onyx_ix_cutsom_grid.git
+      ref:  fix-dynmc-list-filter
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+

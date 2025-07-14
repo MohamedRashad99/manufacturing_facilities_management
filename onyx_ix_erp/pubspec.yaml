@@ -1,0 +1,78 @@
+name: onyx_ix_erp
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  onyx_ix:
+    git:
+      url: https://github.com/MohamedRashad99/ONYX_IX.git
+      ref: master
+  manufacturing_facilities_management:
+    path: ../
+
+  cupertino_icons: ^1.0.8
+  get_it: ^8.0.3
+  flutter_native_splash: ^2.4.4
+
+#dependency_overrides:
+#  onyx_ix:
+#    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/aduio/
+
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: fold/fonts/Cairo-Bold.ttf
+          weight: 700
+        - asset: fold/fonts/Cairo-Regular.ttf
+          weight: 400
+        - asset: fold/fonts/Cairo-Light.ttf
+          weight: 200
+    - family: ReadexPro
+      fonts:
+        - asset: fold/fonts/ReadexPro-SemiBold.ttf
+          weight: 700
+        - asset: fold/fonts/ReadexPro-Regular.ttf
+          weight: 400
+        - asset: fold/fonts/ReadexPro-Light.ttf
+          weight: 200
+    - family: NotoNaskhArabic
+      fonts:
+        - asset: fold/fonts/NotoNaskhArabic-Bold.ttf
+          weight: 700
+        - asset: fold/fonts/NotoNaskhArabic-Regular.ttf
+          weight: 400
+        - asset: fold/fonts/NotoNaskhArabic-Medium.ttf
+          weight: 200
+
+flutter_native_splash:
+  color: "#ffffff"
+  # android_12:
+
+
+  # The android, ios and web parameters can be used to disable generating a splash screen on a given
+  # platform.
+  android: false
+  ios: false
+  web: false
+
+  image_web: web/assets/images/splashlogo-ezgif.com-resize.gif

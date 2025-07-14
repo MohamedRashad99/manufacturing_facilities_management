@@ -1,0 +1,1 @@
+export 'package:manufacturing_facilities_management/core/mrp_injection/mfs_injector.dart';

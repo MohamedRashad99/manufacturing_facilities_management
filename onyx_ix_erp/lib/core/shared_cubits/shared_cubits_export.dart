@@ -1,0 +1,1 @@
+export 'package:onyx_ix/core/shared_cubits/bloc_provider_list.dart';
