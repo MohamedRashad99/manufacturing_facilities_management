@@ -1,7 +1,7 @@
 
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
 
-class ActCubitBuilder implements ModuleCubitBuilder {
+class MfsCubitBuilder implements ModuleCubitBuilder {
   @override
   String get moduleKey => "ACT";
 
@@ -22,9 +22,9 @@ class ActCubitBuilder implements ModuleCubitBuilder {
       MfsGetCubitAndBuilder.checkRemoveTab(tab: tab);
 }
 
-void registerActCubitBuilder() {
+void registerMfsCubitBuilder() {
   GetIt.I.registerSingleton<ModuleCubitBuilder>(
-    ActCubitBuilder(),
-    instanceName: 'ACT',
+    MfsCubitBuilder(),
+    instanceName: 'MFS',
   );
 }
