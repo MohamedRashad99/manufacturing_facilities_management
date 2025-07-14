@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "manufacturing_facilities_management",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "manufacturing_facilities_management (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "manufacturing_facilities_management (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "onyx_ix_erp",
+            "cwd": "onyx_ix_erp",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "onyx_ix_erp (profile mode)",
+            "cwd": "onyx_ix_erp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "onyx_ix_erp (release mode)",
+            "cwd": "onyx_ix_erp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
