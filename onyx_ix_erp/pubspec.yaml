@@ -14,6 +14,7 @@ dependencies:
     git:
       url: https://github.com/MohamedRashad99/ONYX_IX.git
       ref: master
+
   manufacturing_facilities_management:
     path: ../
 

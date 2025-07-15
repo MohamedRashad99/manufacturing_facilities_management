@@ -2,11 +2,9 @@ import 'package:manufacturing_facilities_management/core/featuers/manufacturing_
 import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/screens/all_issue_production_orders_screen.dart';
 import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/screens/issue_production_orders_screen.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
-import 'package:onyx_ix/core/common_widgets/error/default_error_page/cubit/default_error_page_cubit.dart';
-import 'package:onyx_ix/core/injection/injector.dart';
+
 import 'package:onyx_ix/core/routing/app_pages.dart';
-import 'package:onyx_ix/core/types/typedefs.dart';
-import 'package:onyx_ix/features/app_layout/domain/entities/screens_ent.dart';
+
 
 
 class MfsGetCubitAndBuilder {
