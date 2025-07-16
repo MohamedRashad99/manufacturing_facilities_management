@@ -44,7 +44,7 @@ class DetailsIssueProductionOrders extends StatelessWidget {
                               context.activeTabsCubit.addActiveTab(
                                 ScreensEnt(
                                   tabPath:
-                                      AppPaths.newIssueProductionOrdersScreen,
+                                      '',
                                   screenName: 'issue_production_orders'.tr(
                                     context,
                                   ),
@@ -52,7 +52,7 @@ class DetailsIssueProductionOrders extends StatelessWidget {
                                     context,
                                   ),
                                   screenPath:
-                                      AppPaths.newIssueProductionOrdersScreen,
+                                      '',
                                   isAllPrevScreen: false,
                                   isNewItmScreen: true,
                                   cubit: getIt<IssueProductionOrdersCubit>(),
@@ -79,24 +79,24 @@ class DetailsIssueProductionOrders extends StatelessWidget {
                             rowData: context
                                 .read<IssueProductionOrdersCubit>()
                                 .rowData,
-                            currentYearCheckBoxOnPress: context
-                                .read<IssueProductionOrdersCubit>()
-                                .changeCurrentYearCheckBoxMultipleTransfer,
-                            onlyActiveCheckBoxOnPress: context
-                                .read<IssueProductionOrdersCubit>()
-                                .changeOnlyActiveCheckBoxMultipleTransfer,
-                            onlyNotCancelledCheckBoxOnPress: context
-                                .read<IssueProductionOrdersCubit>()
-                                .changeOnlyNotCancelledCheckBoxMultipleTransfer,
-                            currentYearCheckBox: context
-                                .read<IssueProductionOrdersCubit>()
-                                .currentYearCheckBox,
-                            onlyActiveCheckBox: context
-                                .read<IssueProductionOrdersCubit>()
-                                .onlyActiveCheckBox,
-                            onlyNotCancelledCheckBox: context
-                                .read<IssueProductionOrdersCubit>()
-                                .onlyNotCancelledCheckBox,
+                            // currentYearCheckBoxOnPress: context
+                            //     .read<IssueProductionOrdersCubit>()
+                            //     .changeCurrentYearCheckBoxMultipleTransfer,
+                            // onlyActiveCheckBoxOnPress: context
+                            //     .read<IssueProductionOrdersCubit>()
+                            //     .changeOnlyActiveCheckBoxMultipleTransfer,
+                            // onlyNotCancelledCheckBoxOnPress: context
+                            //     .read<IssueProductionOrdersCubit>()
+                            //     .changeOnlyNotCancelledCheckBoxMultipleTransfer,
+                            // currentYearCheckBox: context
+                            //     .read<IssueProductionOrdersCubit>()
+                            //     .currentYearCheckBox,
+                            // onlyActiveCheckBox: context
+                            //     .read<IssueProductionOrdersCubit>()
+                            //     .onlyActiveCheckBox,
+                            // onlyNotCancelledCheckBox: context
+                            //     .read<IssueProductionOrdersCubit>()
+                            //     .onlyNotCancelledCheckBox,
                           ),
                         ),
 
