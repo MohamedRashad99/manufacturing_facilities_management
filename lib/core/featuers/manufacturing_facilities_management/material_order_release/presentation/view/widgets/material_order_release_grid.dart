@@ -1,28 +1,29 @@
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/controllers/issue_production_orders_cubit.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/controllers/material_order_release_cubit.dart';
 
-class IssueProductionOrdersGrid extends StatelessWidget {
-  const IssueProductionOrdersGrid({super.key, required this.offstage});
+class MaterialOrderReleaseGrid extends StatelessWidget {
+  const MaterialOrderReleaseGrid({super.key, required this.offstage});
   final bool offstage;
   final double rowHeight = 40;
 
   @override
   Widget build(BuildContext context) {
     final count =
-        context.read<IssueProductionOrdersCubit>().rowsOnyxIx.length + 2.7;
+        context.read<MaterialOrderReleaseCubit>().rowsOnyxIx.length + 2.7;
     return SizedBox(
-      height: count *
+      height:
+          count *
           rowHeight, // 16 length for grid cell + 2.5 for border && header && footer = 18.5
       child: OnyxIxGrid(
-        columns: context.read<IssueProductionOrdersCubit>().columnsOnyxIx,
-        rows: context.read<IssueProductionOrdersCubit>().rowsOnyxIx,
-        onLoaded: context.read<IssueProductionOrdersCubit>().onLoadedOnyxIx,
+        columns: context.read<MaterialOrderReleaseCubit>().columnsOnyxIx,
+        rows: context.read<MaterialOrderReleaseCubit>().rowsOnyxIx,
+        onLoaded: context.read<MaterialOrderReleaseCubit>().onLoadedOnyxIx,
         onRowDoubleTap: (event) {
           // Get the first cell value from the tapped row
           // final firstCellValue = event
           //     .row
           //     .cells[context
-          //     .read<IssueProductionOrdersCubit>()
+          //     .read<MaterialOrderReleaseCubit>()
           //     .columnsOnyxIx[1]
           //     .field]!
           //     .value;
@@ -37,13 +38,18 @@ class IssueProductionOrdersGrid extends StatelessWidget {
           style: OnyxIxGridStyleConfig(
             rowHeight: rowHeight,
             gridBorderRadius: BorderRadius.circular(4),
-            cellTextStyle:
-                AppTextStyles.styleRegular12(context, color: kTextColor),
-            columnTextStyle:
-                AppTextStyles.styleRegular12(context, color: whiteColor),
+            cellTextStyle: AppTextStyles.styleRegular12(
+              context,
+              color: kTextColor,
+            ),
+            columnTextStyle: AppTextStyles.styleRegular12(
+              context,
+              color: whiteColor,
+            ),
             iconSize: 12,
-            defaultColumnFilterPadding:
-                const EdgeInsets.symmetric(horizontal: 10),
+            defaultColumnFilterPadding: const EdgeInsets.symmetric(
+              horizontal: 10,
+            ),
             iconColor: dividerColor,
             activatedColor: whiteColor,
             activatedBorderColor: kPrimaryColor,

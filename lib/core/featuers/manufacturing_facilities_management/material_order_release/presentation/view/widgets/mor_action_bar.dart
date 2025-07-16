@@ -1,9 +1,9 @@
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
 
-class IpActionBar extends StatelessWidget {
-  const IpActionBar({super.key});
+class MorActionBar extends StatelessWidget {
+  const MorActionBar({super.key});
 
-    @override
+  @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 12, right: 12, bottom: 12),
@@ -30,7 +30,10 @@ class IpActionBar extends StatelessWidget {
       ),
       child: FlexibleWrapWidget(
         itemWidth: context.getWidth(
-            ratioDesktop: 0.35, ratioMobile: 0.9, ratioTablet: 0.4),
+          ratioDesktop: 0.35,
+          ratioMobile: 0.9,
+          ratioTablet: 0.4,
+        ),
         spacing: 0,
         children: [
           const CustomActionMenuActiveTab(usrActnPrv: null),

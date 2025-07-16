@@ -8,11 +8,10 @@ class IssueProductionOrdersTabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      margin: EdgeInsets.zero,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        margin: EdgeInsets.zero,
+        child:
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           BlocBuilder<IssueProductionOrdersCubit, IssueProductionOrdersState>(
             builder: (context, state) {
               return Expanded(
@@ -23,43 +22,37 @@ class IssueProductionOrdersTabs extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SelectTabButton(
-                        title: 'main_data'.tr(context),
-                        isActive: state.selectCurrentTab == 0,
-                        onTap: () {
-                          _onTap(context, index: 0);
-                        },
-                      ),
+                          title: 'main_data'.tr(context),
+                          isActive: state.selectCurrentTab == 0,
+                          onTap: () {
+                            _onTap(context, index: 0);
+                          }),
                       SelectTabButton(
-                        title: 'more_data'.tr(context),
-                        isActive: state.selectCurrentTab == 1,
-                        onTap: () {
-                          _onTap(context, index: 1);
-                        },
-                      ),
+                          title: 'more_data'.tr(context),
+                          isActive: state.selectCurrentTab == 1,
+                          onTap: () {
+                            _onTap(context, index: 1);
+                          }),
                       SelectTabButton(
-                        title: 'linking_subdirectories'.tr(context),
-                        isActive: state.selectCurrentTab == 2,
-                        onTap: () {
-                          _onTap(context, index: 2);
-                        },
-                      ),
+                          title: 'linking_subdirectories'.tr(context),
+                          isActive: state.selectCurrentTab == 2,
+                          onTap: () {
+                            _onTap(context, index: 2);
+                          }),
                       SelectTabButton(
-                        title: 'additional_field_12'.tr(context),
-                        isActive: state.selectCurrentTab == 3,
-                        onTap: () {
-                          _onTap(context, index: 3);
-                        },
-                      ),
+                          title: 'additional_field_12'.tr(context),
+                          isActive: state.selectCurrentTab == 3,
+                          onTap: () {
+                            _onTap(context, index: 3);
+                          }),
                     ],
                   ),
                 ),
               );
             },
           ),
-          const Icon(Icons.list),
-        ],
-      ),
-    );
+          const Icon(Icons.list)
+        ]));
   }
 
   _onTap(BuildContext context, {required int index}) {

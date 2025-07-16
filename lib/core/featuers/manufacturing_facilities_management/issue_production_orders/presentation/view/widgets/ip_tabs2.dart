@@ -8,11 +8,10 @@ class IpTabs2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      margin: EdgeInsets.zero,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        margin: EdgeInsets.zero,
+        child:
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           BlocBuilder<IssueProductionOrdersCubit, IssueProductionOrdersState>(
             builder: (context, state) {
               return Expanded(
@@ -23,26 +22,47 @@ class IpTabs2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SelectTabButton(
-                        title: 'employees_movement2'.tr(context),
-                        isActive: state.selectCurrentTab2 == 0,
-                        onTap: () {
-                          _onTap(context, index: 0);
-                        },
-                      ),
+                          title: 'المسار الانتاجي'.tr(context),
+                          isActive: state.selectCurrentTab2 == 0,
+                          onTap: () {
+                            _onTap(context, index: 0);
+                          }),
                       SelectTabButton(
-                        title: 'employees_requests'.tr(context),
-                        isActive: state.selectCurrentTab2 == 1,
-                        onTap: () {
-                          _onTap(context, index: 1);
-                        },
-                      ),
+                          title: 'قائمة المواد الاولية'.tr(context),
+                          isActive: state.selectCurrentTab2 == 1,
+                          onTap: () {
+                            _onTap(context, index: 1);
+                          }),
                       SelectTabButton(
-                        title: 'Other'.tr(context),
-                        isActive: state.selectCurrentTab2 == 2,
-                        onTap: () {
-                          _onTap(context, index: 2);
-                        },
-                      ),
+                          title: 'امر صرف مواد'.tr(context),
+                          isActive: state.selectCurrentTab2 == 2,
+                          onTap: () {
+                            _onTap(context, index: 2);
+                          }),
+                      SelectTabButton(
+                          title: 'بيانات التشغيل الفعلية'.tr(context),
+                          isActive: state.selectCurrentTab2 == 3,
+                          onTap: () {
+                            _onTap(context, index: 3);
+                          }),
+                      SelectTabButton(
+                          title: 'حركات المواد'.tr(context),
+                          isActive: state.selectCurrentTab2 == 2,
+                          onTap: () {
+                            _onTap(context, index: 2);
+                          }),
+                      SelectTabButton(
+                          title: 'امر مرتجع المواد'.tr(context),
+                          isActive: state.selectCurrentTab2 == 4,
+                          onTap: () {
+                            _onTap(context, index: 4);
+                          }),
+                          SelectTabButton(
+                          title: 'امر تسليم الانتاج'.tr(context),
+                          isActive: state.selectCurrentTab2 == 5,
+                          onTap: () {
+                            _onTap(context, index: 5);
+                          }),
                     ],
                   ),
                 ),
@@ -50,9 +70,7 @@ class IpTabs2 extends StatelessWidget {
             },
           ),
           // const Icon(Icons.list)
-        ],
-      ),
-    );
+        ]));
   }
 
   _onTap(BuildContext context, {required int index}) {

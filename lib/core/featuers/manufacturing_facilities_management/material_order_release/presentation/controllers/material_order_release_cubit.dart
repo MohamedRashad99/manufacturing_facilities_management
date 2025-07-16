@@ -1,9 +1,10 @@
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/controllers/issue_production_orders_state.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/screens/issue_production_orders_screen.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/controllers/material_order_release_state.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/view/screens/material_order_release_screen.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
 import 'package:onyx_ix/core/routing/app_pages.dart';
-class IssueProductionOrdersCubit extends Cubit<IssueProductionOrdersState> {
-  IssueProductionOrdersCubit() : super(const IssueProductionOrdersState()) {
+
+class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
+  MaterialOrderReleaseCubit() : super(const MaterialOrderReleaseState()) {
     pageController =
         PageController(initialPage: pageIndex); // Initialize in constructor
   }
@@ -203,13 +204,13 @@ class IssueProductionOrdersCubit extends Cubit<IssueProductionOrdersState> {
                     .replaceRange(0, 'request'.length,
                         'request'.tr(navigatorKey.currentContext!)),
                 screenPath: AppPaths.previousIncomingStockOrderScreen,
-                cubit: getIt<IssueProductionOrdersCubit>(),
+                cubit: getIt<MaterialOrderReleaseCubit>(),
                 screenId: 5211,
                 sysNo: 40,
                 builder: (context, cubit) =>
-                    BlocProvider<IssueProductionOrdersCubit>.value(
-                  value: cubit as IssueProductionOrdersCubit,
-                  child: const IssueProductionOrdersScreen(),
+                    BlocProvider<MaterialOrderReleaseCubit>.value(
+                  value: cubit as MaterialOrderReleaseCubit,
+                  child: const MaterialOrderReleaseScreen(),
                 ),
               ),
             );

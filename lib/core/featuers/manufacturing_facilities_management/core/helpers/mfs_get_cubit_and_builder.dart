@@ -5,6 +5,8 @@ import 'package:manufacturing_facilities_management/core/src/manufacturing_facil
 
 import 'package:onyx_ix/core/routing/app_pages.dart';
 
+import '../../material_order_release/presentation/presentation.dart';
+
 
 
 class MfsGetCubitAndBuilder {
@@ -15,6 +17,8 @@ class MfsGetCubitAndBuilder {
     switch ((screensEnt.screenId, show)) {
       case (11533, true):
         return getIt<IssueProductionOrdersCubit>();
+        case (11585, true):
+        return getIt<MaterialOrderReleaseCubit>();
       
 
       default:
@@ -32,10 +36,25 @@ class MfsGetCubitAndBuilder {
                 value: cubit as IssueProductionOrdersCubit,
                 child: const AllIssueProductionOrdersScreen(),
               );
-        } else {
+              
+        } 
+        
+        else {
           return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
                 value: cubit as IssueProductionOrdersCubit,
                 child: const IssueProductionOrdersScreen(),
+              );
+        }
+          case (11585, true):
+        if (screensEnt.isAllPrevScreen) {
+          return (context, cubit) => BlocProvider<MaterialOrderReleaseCubit>.value(
+                value: cubit as MaterialOrderReleaseCubit,
+                child: const AllMaterialOrderReleaseScreen(),
+              );
+        } else {
+          return (context, cubit) => BlocProvider<MaterialOrderReleaseCubit>.value(
+                value: cubit as MaterialOrderReleaseCubit,
+                child: const MaterialOrderReleaseScreen(),
               );
         }
        

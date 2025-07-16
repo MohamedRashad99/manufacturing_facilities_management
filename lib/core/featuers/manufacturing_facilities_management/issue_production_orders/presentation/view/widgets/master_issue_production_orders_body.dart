@@ -6,6 +6,7 @@ import 'package:manufacturing_facilities_management/core/featuers/manufacturing_
 import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/widgets/new%20tabs/tab_devices_used_user_em__body.dart';
 import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/widgets/new%20tabs/tab_extra2_issue_production_orders_body.dart';
 import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/widgets/new%20tabs/tab_extra_issue_production_orders_body.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/widgets/new%20tabs/tab_from_accounts_employees_movement_body.dart';
 import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/widgets/new%20tabs/tab_from_accounts_issue_production_orders_body%20copy.dart';
 import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/widgets/new%20tabs/tab_from_issue_production_orders_body.dart';
 import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/widgets/new%20tabs/tab_main_issue_production_orders_body.dart';
@@ -33,9 +34,7 @@ class MasterIssueProductionOrdersBody extends StatelessWidget {
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 12),
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 4,
-                      ),
+                          horizontal: 12, vertical: 4),
                       decoration: BoxDecoration(
                         color: whiteColor,
                         boxShadow: [
@@ -46,46 +45,39 @@ class MasterIssueProductionOrdersBody extends StatelessWidget {
                         ],
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child:
-                          BlocBuilder<
-                            IssueProductionOrdersCubit,
-                            IssueProductionOrdersState
-                          >(
-                            builder: (context, state) {
-                              int currentTab = state.selectCurrentTab;
-                              return Column(
-                                key: key,
-                                children: [
-                                  switch (currentTab) {
-                                    0 =>
-                                      const TabMainIssueProductionOrdersBody(),
-                                    1 =>
-                                      const TabFromIssueProductionOrdersBody(),
-                                    2 =>
-                                      const TabExtra2IssueProductionOrdersBody(),
-                                    3 =>
-                                      const TabExtraIssueProductionOrdersBody(),
+                      child: BlocBuilder<IssueProductionOrdersCubit,
+                          IssueProductionOrdersState>(
+                        builder: (context, state) {
+                          int currentTab = state.selectCurrentTab;
+                          return Column(
+                            key: key,
+                            children: [
+                              switch (currentTab) {
+                                0 => const TabMainIssueProductionOrdersBody(),
+                                1 =>
+                                  const TabFromIssueProductionOrdersBody(),
+                                2 =>
+                                  const TabExtra2IssueProductionOrdersBody(),
+                                3 =>
+                                  const TabExtraIssueProductionOrdersBody(),
 
-                                    _ =>
-                                      const TabMainIssueProductionOrdersBody(),
-                                  },
-                                  // CustomGridItemsMultipleStockTransfer(
-                                  //   offstage: currentTab != 0,
-                                  // ),
-                                ],
-                              );
-                            },
-                          ),
+                                _ => const TabMainIssueProductionOrdersBody(),
+                              },
+                              // CustomGridItemsMultipleStockTransfer(
+                              //   offstage: currentTab != 0,
+                              // ),
+                            ],
+                          );
+                        },
+                      ),
                     ),
 
                     const HSpacer(20),
                     const IpTabs2(),
-                    Container(
+                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 12),
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 4,
-                      ),
+                          horizontal: 12, vertical: 4),
                       decoration: BoxDecoration(
                         color: whiteColor,
                         boxShadow: [
@@ -96,39 +88,43 @@ class MasterIssueProductionOrdersBody extends StatelessWidget {
                         ],
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child:
-                          BlocBuilder<
-                            IssueProductionOrdersCubit,
-                            IssueProductionOrdersState
-                          >(
-                            builder: (context, state) {
-                              int currentTab2 = state.selectCurrentTab2;
-                              return Column(
-                                key: key,
-                                children: [
-                                  switch (currentTab2) {
-                                    0 =>
-                                      const TabFromAccountsEmployeesBody(),
-                                    1 => const TabFromAccountsEmployeesBody(),
-                                    2 => const TabDevicesUsedEmBody(),
-                                    // 4 =>
-                                    // const TabDevicesUsedEmBody(),
-                                    _ =>
-                                      const TabFromAccountsEmployeesBody(),
-                                  },
-                                  // CustomGridItemsMultipleStockTransfer(
-                                  //   offstage: currentTab != 0,
-                                  // ),
-                                ],
-                              );
-                            },
-                          ),
+                      child: BlocBuilder<IssueProductionOrdersCubit,
+                          IssueProductionOrdersState>(
+                        builder: (context, state) {
+                          int currentTab2 = state.selectCurrentTab2;
+                          return Column(
+                            key: key,
+                            children: [
+                              switch (currentTab2) {
+                                0 => const TabFromAccountsEmployeesMovementBody(),
+                                1 =>
+                                  const TabFromAccountsEmployeesBody(),
+                                2 =>
+                                  const TabDevicesUsedEmBody(),
+                                3 =>
+                                  const TabDevicesUsedEmBody(),
+                                4 =>
+                                  const TabDevicesUsedEmBody(),
+                                5 =>
+                                  const TabDevicesUsedEmBody(),
+                                // 4 =>
+                                  // const TabDevicesUsedEmBody(),
+                                _ => const TabFromAccountsEmployeesMovementBody(),
+                              },
+                              // CustomGridItemsMultipleStockTransfer(
+                              //   offstage: currentTab != 0,
+                              // ),
+                            ],
+                          );
+                        },
+                      ),
                     ),
+
                   ],
                 ),
               ),
             ),
-
+           
             // const CustomTabBarInStockRequestWidget()
           ],
         );
