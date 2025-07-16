@@ -1,5 +1,8 @@
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
 
+import '../../controllers/issue_production_orders_cubit.dart';
+import '../../controllers/issue_production_orders_state.dart';
+
 class IpTabs2 extends StatelessWidget {
   const IpTabs2({super.key});
 

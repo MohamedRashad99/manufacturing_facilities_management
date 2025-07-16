@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
-
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
+
+import '../../domain/entities/issue_production_orders_ent.dart';
 
 class IssueProductionOrdersModel extends Equatable {
   String? s;

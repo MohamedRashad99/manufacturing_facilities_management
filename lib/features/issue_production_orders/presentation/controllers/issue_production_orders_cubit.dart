@@ -2,6 +2,9 @@ import 'package:manufacturing_facilities_management/core/src/manufacturing_facil
 import 'package:onyx_ix/core/routing/app_pages.dart';
 part 'issue_production_orders_state.dart';
 
+import '../view/screens/issue_production_orders_screen.dart';
+import 'issue_production_orders_state.dart';
+
 class IssueProductionOrdersCubit extends Cubit<IssueProductionOrdersState> {
   IssueProductionOrdersCubit() : super(const IssueProductionOrdersState()) {
     pageController =
