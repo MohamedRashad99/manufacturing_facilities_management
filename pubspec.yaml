@@ -14,7 +14,6 @@ dependencies:
   onyx_ix:
     git:
       url: https://github.com/MohamedRashad99/onyx_erp.git
-      #      ref: alijhlan/master/13-7
       ref: dev-monorepo
 
 dependency_overrides:
