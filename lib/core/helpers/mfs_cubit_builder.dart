@@ -3,7 +3,7 @@ import 'package:manufacturing_facilities_management/core/src/manufacturing_facil
 
 class MfsCubitBuilder implements ModuleCubitBuilder {
   @override
-  String get moduleKey => "ACT";
+  String get moduleKey => "MFS";
 
   @override
   dynamic getCubit({required ScreensEnt screensEnt, bool show = true}) =>

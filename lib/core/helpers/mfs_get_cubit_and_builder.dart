@@ -1,3 +1,12 @@
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/controllers/issue_production_orders_cubit.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/screens/all_issue_production_orders_screen.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/screens/issue_production_orders_screen.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/controllers/material_order_release_cubit.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/view/screens/all_material_order_release_screen.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/view/screens/material_order_release_screen.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/presentation/controllers/material_return_cubit.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/presentation/view/screens/all_material_return_screen.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/presentation/view/screens/material_return_screen.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
 
 
@@ -8,8 +17,11 @@ class MfsGetCubitAndBuilder {
   static dynamic getCubit({required ScreensEnt screensEnt, bool show = true}) {
     switch ((screensEnt.screenId, show)) {
       case (11533, true):
-        // return getIt<IssueProductionOrdersCubit>();
-      
+        return getIt<IssueProductionOrdersCubit>();
+      case (11585, true):
+        return getIt<MaterialOrderReleaseCubit>();
+      case (11589, true):
+        return getIt<MaterialReturnCubit>();
 
       default:
         return getIt<DefaultErrorPageCubit>();
@@ -22,15 +34,39 @@ class MfsGetCubitAndBuilder {
     switch ((screensEnt.screenId, show)) {
             case (11533, true):
         if (screensEnt.isAllPrevScreen) {
-        //   return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
-        //         value: cubit as IssueProductionOrdersCubit,
-        //         child: const AllIssueProductionOrdersScreen(),
-        //       );
-        // } else {
-        //   return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
-        //         value: cubit as IssueProductionOrdersCubit,
-        //         child: const IssueProductionOrdersScreen(),
-        //       );
+          return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
+                value: cubit as IssueProductionOrdersCubit,
+                child: const AllIssueProductionOrdersScreen(),
+              );
+        } else {
+          return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
+                value: cubit as IssueProductionOrdersCubit,
+                child: const IssueProductionOrdersScreen(),
+              );
+        }
+         case (11585, true):
+        if (screensEnt.isAllPrevScreen) {
+          return (context, cubit) => BlocProvider<MaterialOrderReleaseCubit>.value(
+                value: cubit as MaterialOrderReleaseCubit,
+                child: const AllMaterialOrderReleaseScreen(),
+              );
+        } else {
+          return (context, cubit) => BlocProvider<MaterialOrderReleaseCubit>.value(
+                value: cubit as MaterialOrderReleaseCubit,
+                child: const MaterialOrderReleaseScreen(),
+              );
+        }
+            case (11589, true):
+        if (screensEnt.isAllPrevScreen) {
+          return (context, cubit) => BlocProvider<MaterialReturnCubit>.value(
+                value: cubit as MaterialReturnCubit,
+                child: const AllMaterialReturnScreen(),
+              );
+        } else {
+          return (context, cubit) => BlocProvider<MaterialReturnCubit>.value(
+                value: cubit as MaterialReturnCubit,
+                child: const MaterialReturnScreen(),
+              );
         }
        
       
