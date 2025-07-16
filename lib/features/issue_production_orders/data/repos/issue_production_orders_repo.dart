@@ -1,6 +1,4 @@
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
-import 'package:onyx_ix/core/network/err_handler/err_handler.dart';
-import 'package:onyx_ix/features/common_feature/domain/entities/feature_doc_data_ent.dart';
 
 import '../../domain/contracts/issue_production_orders_cont.dart';
 import '../datasources/issue_production_orders_remote_ds.dart';

@@ -1,8 +1,4 @@
-import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
-
-///* TODO: Note that this is not correct state file that we will use in the future
-///* TODO: We will replace it. We're just using it for now to avoid errors
-
+part of 'issue_production_orders_cubit.dart';
 @immutable
 class IssueProductionOrdersState {
   final bool isLoading;

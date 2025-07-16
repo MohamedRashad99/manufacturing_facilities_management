@@ -8,7 +8,7 @@ class MfsGetCubitAndBuilder {
   static dynamic getCubit({required ScreensEnt screensEnt, bool show = true}) {
     switch ((screensEnt.screenId, show)) {
       case (11533, true):
-        // return getIt<IssueProductionOrdersCubit>();
+        return getIt<IssueProductionOrdersCubit>();
       
 
       default:
@@ -19,18 +19,19 @@ class MfsGetCubitAndBuilder {
   /// Get widget builder for each screen, checking Firebase Remote Config.
   static WidgetBuilderWithCubit? getBuilder(
       {required ScreensEnt screensEnt, bool show = true}) {
+    AppLogs.debugLog("HERE=======>${screensEnt.screenId}:::::$show");
     switch ((screensEnt.screenId, show)) {
             case (11533, true):
         if (screensEnt.isAllPrevScreen) {
-        //   return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
-        //         value: cubit as IssueProductionOrdersCubit,
-        //         child: const AllIssueProductionOrdersScreen(),
-        //       );
-        // } else {
-        //   return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
-        //         value: cubit as IssueProductionOrdersCubit,
-        //         child: const IssueProductionOrdersScreen(),
-        //       );
+          return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
+                value: cubit as IssueProductionOrdersCubit,
+                child: const AllIssueProductionOrdersScreen(),
+              );
+        } else {
+          return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
+                value: cubit as IssueProductionOrdersCubit,
+                child: const IssueProductionOrdersScreen(),
+              );
         }
        
       
@@ -46,18 +47,12 @@ class MfsGetCubitAndBuilder {
   /// remove tab
   static dynamic removeTab({required ScreensEnt tab}) async {
     switch (tab.screenId) {
-      // case 11533:
-      //   return tab.isNewItmScreen
-      //       ? await (tab.cubit as IncomingStockOrdersCubit).insert()
-      //       : tab.cubit?.state.isEditing
-      //           ? await (tab.cubit as IncomingStockOrdersCubit).updateDoc()
-      //           : null;
-      // case 5214:
-      //   return tab.isNewItmScreen
-      //       ? await (tab.cubit as OutStockRequestCubit).insert()
-      //       : tab.cubit?.state.isEditing
-      //           ? await (tab.cubit as OutStockRequestCubit).updateDoc()
-      //           : null;
+      case 11533:
+        // return tab.isNewItmScreen
+        //     ? await (tab.cubit as IssueProductionOrdersCubit).insert()
+        //     : tab.cubit?.state.isEditing
+        //         ? await (tab.cubit as IssueProductionOrdersCubit).updateDoc()
+        //         : null;
       default:
         return getIt<NavigationService>(). navigatorKey.currentContext?.activeTabsCubit.removeActiveTab(tab,
             reSetSideMenuTree: () => getIt<NavigationService>().navigatorKey.currentContext?.appLayoutCubit

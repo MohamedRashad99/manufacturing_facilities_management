@@ -44,16 +44,14 @@ class DetailsIssueProductionOrders extends StatelessWidget {
                             addNewOnPressed: () {
                               context.activeTabsCubit.addActiveTab(
                                 ScreensEnt(
-                                  tabPath:
-                                      '',
+                                  tabPath: "/MFS/MRP/issueproductionorders/new",
                                   screenName: 'issue_production_orders'.tr(
                                     context,
                                   ),
                                   tabName: 'all_issue_production_orders'.tr(
                                     context,
                                   ),
-                                  screenPath:
-                                      '',
+                                  screenPath: "/MFS/MRP/issueproductionorders/new",
                                   isAllPrevScreen: false,
                                   isNewItmScreen: true,
                                   cubit: getIt<IssueProductionOrdersCubit>(),
