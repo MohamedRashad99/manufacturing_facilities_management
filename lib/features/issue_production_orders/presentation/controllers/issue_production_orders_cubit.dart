@@ -2,9 +2,6 @@ import 'package:manufacturing_facilities_management/core/src/manufacturing_facil
 import 'package:onyx_ix/core/routing/app_pages.dart';
 part 'issue_production_orders_state.dart';
 
-import '../view/screens/issue_production_orders_screen.dart';
-import 'issue_production_orders_state.dart';
-
 class IssueProductionOrdersCubit extends Cubit<IssueProductionOrdersState> {
   IssueProductionOrdersCubit() : super(const IssueProductionOrdersState()) {
     pageController =
@@ -546,12 +543,12 @@ class IssueProductionOrdersCubit extends Cubit<IssueProductionOrdersState> {
     emit(state.copyWith(warehouseDataValue: val));
   }
 
-  List<Widget> pageDialog = [
-    const InputUpdateDataDialogPage(),
-    const StopDialogPage(),
-    const ApprovalDialogPage(),
-    const CancelDialogPage(),
-  ];
+  // List<Widget> pageDialog = [
+  //   const InputUpdateDataDialogPage(),
+  //   const StopDialogPage(),
+  //   const ApprovalDialogPage(),
+  //   const CancelDialogPage(),
+  // ];
 
   changeShowBottomTab() {
     emit(state.copyWith(showButton: !state.showButton));

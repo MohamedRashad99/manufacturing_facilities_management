@@ -2,7 +2,6 @@
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
 
 import '../../../controllers/issue_production_orders_cubit.dart';
-import '../../../controllers/issue_production_orders_state.dart';
 
 class TabDevicesUsedEmBody extends StatelessWidget {
   const TabDevicesUsedEmBody({super.key});
@@ -12,7 +11,7 @@ class TabDevicesUsedEmBody extends StatelessWidget {
     return BlocBuilder<IssueProductionOrdersCubit, IssueProductionOrdersState>(
         builder: (context, state) {
       final expenseColumns = [
-  
+
   OnyxIxColumn(
     title: 'document_name'.tr(context),
     fieldId: 'document_name',
@@ -34,7 +33,7 @@ class TabDevicesUsedEmBody extends StatelessWidget {
     type: OnyxIxColumnType.inputText(),
     backgroundColor: kSkyDarkColor,
   ),
- 
+
  OnyxIxColumn(
           title: '',
           fieldId: 'menu',
@@ -92,7 +91,7 @@ class TabDevicesUsedEmBody extends StatelessWidget {
     'document_name': '235-اسم المنتج',
     'document_amount': '7,515,00',
     'currency_hint': 'EGP',
-    
+
 
   },
   {
@@ -114,7 +113,7 @@ class TabDevicesUsedEmBody extends StatelessWidget {
           'document_name': OnyxIxCell(value: e['document_name']),
           'document_amount': OnyxIxCell(value: e['document_amount']),
           'currency_hint': OnyxIxCell(value: e['currency_hint']),
-          
+
           'menu': OnyxIxCell(value: ''), // for delete icon
         }))
     .toList(),
@@ -151,7 +150,7 @@ class TabDevicesUsedEmBody extends StatelessWidget {
               },
             )),
         const HSpacer(4),
-        
+
       ]);
     });
   }
