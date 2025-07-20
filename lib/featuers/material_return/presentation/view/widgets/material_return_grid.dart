@@ -1,5 +1,5 @@
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/presentation/controllers/material_return_cubit.dart';
+import 'package:manufacturing_facilities_management/featuers/material_return/presentation/controllers/material_return_cubit.dart';
 
 class MaterialReturnGrid extends StatelessWidget {
   const MaterialReturnGrid({super.key, required this.offstage});

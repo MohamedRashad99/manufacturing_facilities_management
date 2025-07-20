@@ -1,7 +1,7 @@
 import 'package:manufacturing_facilities_management/core/routing/app_pages.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/presentation/controllers/material_return_state.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/presentation/view/screens/material_return_screen.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
+import 'package:manufacturing_facilities_management/featuers/material_return/presentation/controllers/material_return_state.dart';
+import 'package:manufacturing_facilities_management/featuers/material_return/presentation/view/screens/material_return_screen.dart';
 
 class MaterialReturnCubit extends Cubit<MaterialReturnState> {
   MaterialReturnCubit() : super(const MaterialReturnState()) {

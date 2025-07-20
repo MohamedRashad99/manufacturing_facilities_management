@@ -1,5 +1,5 @@
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/data/models/material_return_model.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
+import 'package:manufacturing_facilities_management/featuers/material_return/data/models/material_return_model.dart';
 
 abstract class MaterialReturnRemoteDs {
   Future<Either<Failure, FeatureDocDataModel>> insert(

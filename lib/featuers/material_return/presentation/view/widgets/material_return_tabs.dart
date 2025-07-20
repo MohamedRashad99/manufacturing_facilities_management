@@ -1,6 +1,6 @@
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/presentation/controllers/material_return_cubit.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/presentation/controllers/material_return_state.dart';
+import 'package:manufacturing_facilities_management/featuers/material_return/presentation/controllers/material_return_cubit.dart';
+import 'package:manufacturing_facilities_management/featuers/material_return/presentation/controllers/material_return_state.dart';
 
 class MaterialReturnTabs extends StatelessWidget {
   const MaterialReturnTabs({super.key});
