@@ -1,8 +1,9 @@
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/view/screens/material_order_release_screen.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/view/widgets/material_order_release_grid.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/controllers/material_order_release_cubit.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/controllers/material_order_release_state.dart';
+import 'package:manufacturing_facilities_management/featuers/material_order_release/presentation/controllers/material_order_release_cubit.dart';
+import 'package:manufacturing_facilities_management/featuers/material_order_release/presentation/controllers/material_order_release_state.dart';
+import 'package:manufacturing_facilities_management/featuers/material_order_release/presentation/view/screens/material_order_release_screen.dart';
+import 'package:manufacturing_facilities_management/featuers/material_order_release/presentation/view/widgets/material_order_release_grid.dart';
+
 class DetailsMaterialOrderRelease extends StatelessWidget {
   const DetailsMaterialOrderRelease({super.key});
 

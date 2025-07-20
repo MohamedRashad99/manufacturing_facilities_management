@@ -1,6 +1,6 @@
 // import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
-// import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/controllers/material_order_release_cubit.dart';
-// import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_order_release/presentation/controllers/material_order_release_state.dart';
+// import 'package:manufacturing_facilities_management/featuers/material_order_release/presentation/controllers/material_order_release_cubit.dart';
+// import 'package:manufacturing_facilities_management/featuers/material_order_release/presentation/controllers/material_order_release_state.dart';
 
 // class CustomPopupWidgetMaterialOrderRelease extends StatelessWidget {
 //   final String? title;
