@@ -1,8 +1,8 @@
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/screens/issue_production_orders_screen.dart';
-import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/issue_production_orders/presentation/view/widgets/issue_production_orders_grid.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
 import 'package:manufacturing_facilities_management/featuers/issue_production_orders/presentation/controllers/issue_production_orders_cubit.dart';
 import 'package:manufacturing_facilities_management/featuers/issue_production_orders/presentation/controllers/issue_production_orders_state.dart';
+import 'package:manufacturing_facilities_management/featuers/issue_production_orders/presentation/view/screens/issue_production_orders_screen.dart';
+import 'package:manufacturing_facilities_management/featuers/issue_production_orders/presentation/view/widgets/issue_production_orders_grid.dart';
 
 class DetailsIssueProductionOrders extends StatelessWidget {
   const DetailsIssueProductionOrders({super.key});
