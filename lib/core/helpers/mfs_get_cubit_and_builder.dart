@@ -9,6 +9,8 @@ import 'package:manufacturing_facilities_management/core/featuers/manufacturing_
 import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/material_return/presentation/view/screens/material_return_screen.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
 
+import '../../features/issue_production_orders/presentation/controllers/issue_production_orders_cubit.dart';
+
 
 class MfsGetCubitAndBuilder {
   MfsGetCubitAndBuilder._();
@@ -18,10 +20,7 @@ class MfsGetCubitAndBuilder {
     switch ((screensEnt.screenId, show)) {
       case (11533, true):
         return getIt<IssueProductionOrdersCubit>();
-      case (11585, true):
-        return getIt<MaterialOrderReleaseCubit>();
-      case (11589, true):
-        return getIt<MaterialReturnCubit>();
+      
 
       default:
         return getIt<DefaultErrorPageCubit>();
@@ -31,6 +30,7 @@ class MfsGetCubitAndBuilder {
   /// Get widget builder for each screen, checking Firebase Remote Config.
   static WidgetBuilderWithCubit? getBuilder(
       {required ScreensEnt screensEnt, bool show = true}) {
+    AppLogs.debugLog("HERE=======>${screensEnt.screenId}:::::$show");
     switch ((screensEnt.screenId, show)) {
             case (11533, true):
         if (screensEnt.isAllPrevScreen) {
@@ -42,30 +42,6 @@ class MfsGetCubitAndBuilder {
           return (context, cubit) => BlocProvider<IssueProductionOrdersCubit>.value(
                 value: cubit as IssueProductionOrdersCubit,
                 child: const IssueProductionOrdersScreen(),
-              );
-        }
-         case (11585, true):
-        if (screensEnt.isAllPrevScreen) {
-          return (context, cubit) => BlocProvider<MaterialOrderReleaseCubit>.value(
-                value: cubit as MaterialOrderReleaseCubit,
-                child: const AllMaterialOrderReleaseScreen(),
-              );
-        } else {
-          return (context, cubit) => BlocProvider<MaterialOrderReleaseCubit>.value(
-                value: cubit as MaterialOrderReleaseCubit,
-                child: const MaterialOrderReleaseScreen(),
-              );
-        }
-            case (11589, true):
-        if (screensEnt.isAllPrevScreen) {
-          return (context, cubit) => BlocProvider<MaterialReturnCubit>.value(
-                value: cubit as MaterialReturnCubit,
-                child: const AllMaterialReturnScreen(),
-              );
-        } else {
-          return (context, cubit) => BlocProvider<MaterialReturnCubit>.value(
-                value: cubit as MaterialReturnCubit,
-                child: const MaterialReturnScreen(),
               );
         }
        
@@ -82,18 +58,12 @@ class MfsGetCubitAndBuilder {
   /// remove tab
   static dynamic removeTab({required ScreensEnt tab}) async {
     switch (tab.screenId) {
-      // case 11533:
-      //   return tab.isNewItmScreen
-      //       ? await (tab.cubit as IncomingStockOrdersCubit).insert()
-      //       : tab.cubit?.state.isEditing
-      //           ? await (tab.cubit as IncomingStockOrdersCubit).updateDoc()
-      //           : null;
-      // case 5214:
-      //   return tab.isNewItmScreen
-      //       ? await (tab.cubit as OutStockRequestCubit).insert()
-      //       : tab.cubit?.state.isEditing
-      //           ? await (tab.cubit as OutStockRequestCubit).updateDoc()
-      //           : null;
+      case 11533:
+        // return tab.isNewItmScreen
+        //     ? await (tab.cubit as IssueProductionOrdersCubit).insert()
+        //     : tab.cubit?.state.isEditing
+        //         ? await (tab.cubit as IssueProductionOrdersCubit).updateDoc()
+        //         : null;
       default:
         return getIt<NavigationService>(). navigatorKey.currentContext?.activeTabsCubit.removeActiveTab(tab,
             reSetSideMenuTree: () => getIt<NavigationService>().navigatorKey.currentContext?.appLayoutCubit
