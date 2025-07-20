@@ -1,5 +1,5 @@
 
-import 'package:manufacturing_facilities_management/core/helpers/mfs_get_cubit_and_builder.dart';
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/core/helpers/mfs_get_cubit_and_builder.dart';
 
 import '../src/onyx_ix_app_export.dart';
 

@@ -1,4 +1,5 @@
-import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart' show registerMfsCubitBuilder;
+import 'package:manufacturing_facilities_management/core/featuers/manufacturing_facilities_management/core/helpers/mfs_cubit_builder.dart';
+// ignore: depend_on_referenced_packages
 import 'package:file_manager/file_manager.dart' as fm;
 import 'core/src/onyx_ix_app_export.dart';
 
