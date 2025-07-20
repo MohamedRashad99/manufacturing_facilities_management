@@ -1,19 +1,11 @@
-import 'package:manufacturing_facilities_management/featuers/issue_production_orders/presentation/controllers/issue_production_orders_cubit.dart';
-import 'package:manufacturing_facilities_management/featuers/issue_production_orders/presentation/view/screens/all_issue_production_orders_screen.dart';
-import 'package:manufacturing_facilities_management/featuers/issue_production_orders/presentation/view/screens/issue_production_orders_screen.dart';
-import 'package:manufacturing_facilities_management/featuers/material_order_release/presentation/controllers/material_order_release_cubit.dart';
-import 'package:manufacturing_facilities_management/featuers/material_order_release/presentation/view/screens/all_material_order_release_screen.dart';
-import 'package:manufacturing_facilities_management/featuers/material_order_release/presentation/view/screens/material_order_release_screen.dart';
-import 'package:manufacturing_facilities_management/featuers/material_return/presentation/controllers/material_return_cubit.dart';
 import 'package:manufacturing_facilities_management/core/src/manufacturing_facilities_management_export.dart';
-import 'package:manufacturing_facilities_management/featuers/material_return/presentation/view/screens/all_material_return_screen.dart';
-import 'package:manufacturing_facilities_management/featuers/material_return/presentation/view/screens/material_return_screen.dart';
 
 class MfsGetCubitAndBuilder {
   MfsGetCubitAndBuilder._();
 
   /// Fetch cubit based on screen ID, checking Firebase Remote Config for availability.
   static dynamic getCubit({required ScreensEnt screensEnt, bool show = true}) {
+    AppLogs.debugLog("screenId=========>${screensEnt.screenId}");
     switch ((screensEnt.screenId, show)) {
       case (11533, true):
         return getIt<IssueProductionOrdersCubit>();

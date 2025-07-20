@@ -5,3 +5,6 @@ export 'package:manufacturing_facilities_management/core/helpers/mfs_cubit_build
 export 'package:manufacturing_facilities_management/core/mrp_injection/mfs_injector.dart';
 export 'package:manufacturing_facilities_management/core/extensions/extensions_export.dart';
 export 'package:manufacturing_facilities_management/features/issue_production_orders/src_issue_production_orders.dart';
+export 'package:manufacturing_facilities_management/features/material_order_release/material_order_release.dart';
+export 'package:manufacturing_facilities_management/features/material_return/material_return.dart';
+export 'package:manufacturing_facilities_management/features/production_delivery_order/production_delivery_order.dart';

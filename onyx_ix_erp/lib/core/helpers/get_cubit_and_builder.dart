@@ -9,6 +9,7 @@ class GetCubitAndBuilder {
   /// Fetch cubit based on screen ID, checking Firebase Remote Config for availability.
   static dynamic getCubit({required ScreensEnt screensEnt, bool show = true}) {
     String moduleKey = screensEnt.screenPath.split("/")[1];
+    AppLogs.debugLog("moduleKey============>$moduleKey");
     switch (moduleKey) {
       case "MFS":
         return MfsGetCubitAndBuilder.getCubit(screensEnt: screensEnt, show: show);

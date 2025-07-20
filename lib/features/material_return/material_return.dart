@@ -1,0 +1,19 @@
+export 'presentation/view/screens/all_material_return_screen.dart';
+export 'presentation/view/screens/material_return_screen.dart';
+export 'presentation/controllers/material_return_cubit.dart';
+
+export 'data/models/material_return_model.dart';
+export 'domain/entities/material_return_ent.dart';
+export 'domain/contracts/material_return_cont.dart';
+export 'data/datasources/material_return_remote_ds.dart';
+export 'presentation/view/widgets/details_material_return.dart';
+export 'presentation/view/widgets/master_material_return_body.dart';
+export 'presentation/view/widgets/material_return_grid.dart';
+export 'presentation/view/widgets/material_return_tabs.dart';
+export 'presentation/view/widgets/mr_action_bar.dart';
+export 'presentation/view/widgets/custom_tabs/tab_from_accounts_material_return_body.dart';
+export 'presentation/view/widgets/custom_tabs/custom_tabs.dart';
+export 'presentation/view/widgets/custom_tabs/custom_grid_material_return.dart';
+export 'presentation/view/widgets/custom_tabs/tab_main_material_return_body.dart';
+export 'presentation/view/widgets/custom_tabs/tab_other_data_material_return_body.dart';
+export 'presentation/view/widgets/custom_tabs/tab_sales_burdens__material_return_body.dart';
