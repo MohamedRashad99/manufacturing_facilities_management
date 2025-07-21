@@ -23,10 +23,11 @@
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
-.dart_tool/
+
 .flutter-plugins
 .flutter-plugins-dependencies
-.packages
+import 'package:manufacturing_facilities_management/featuers/material_return/presentation/controllers/material_return_state.dart';
+
 .pub-cache/
 .pub/
 /build/
