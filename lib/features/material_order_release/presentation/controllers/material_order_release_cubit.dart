@@ -3,8 +3,9 @@ import 'package:manufacturing_facilities_management/core/src/manufacturing_facil
 part 'material_order_release_state.dart';
 class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
   MaterialOrderReleaseCubit() : super(const MaterialOrderReleaseState()) {
-    pageController =
-        PageController(initialPage: pageIndex); // Initialize in constructor
+    pageController = PageController(
+      initialPage: pageIndex,
+    ); // Initialize in constructor
   }
 
   var formKey = GlobalKey<FormState>();
@@ -24,93 +25,35 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
     {
       'document_number': '600014-98',
       'document_date': 'document_date_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'sub_document_type': 'type_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'warehouse_name': '-',
-      'vendor_name': 'vendor_name'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'currency': 'currency_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'reference_number': '4',
-      'seller_invoice_number':
-          'seller_invoice_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'vendor_invoice_date':
-          'vendor_invoice_date'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'bill_lading_number':
-          'bill_lading_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
+      'reference_number': '5',
+      'manual_number': '5',
+      'declaration': 'declaration'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
       'financial_unit': 'financial_unit_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'net_amount_2': 'net_amount_2'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
+
+
       'statement': 'statement_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
     },
     {
       'document_number': '600014-20',
       'document_date': 'document_date_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'sub_document_type': 'type_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'warehouse_name': '-',
-      'vendor_name': 'vendor_name'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'currency': 'currency_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'reference_number': '4',
-      'seller_invoice_number':
-          'seller_invoice_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'vendor_invoice_date':
-          'vendor_invoice_date'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'bill_lading_number':
-          'bill_lading_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
+      'reference_number': '5',
+      'manual_number': '14',
+      'declaration': 'declaration'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
       'financial_unit': 'financial_unit_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'net_amount_2': 'net_amount_2'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
+     
+  
       'statement': 'statement_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
     },
     {
       'document_number': '240014-222',
       'document_date': 'document_date_2'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'sub_document_type': 'type_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'warehouse_name': '-',
-      'vendor_name': 'vendor_name'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'currency': 'currency_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'reference_number': '4',
-      'seller_invoice_number':
-          'seller_invoice_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'vendor_invoice_date':
-          'vendor_invoice_date'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'bill_lading_number':
-          'bill_lading_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
+      'reference_number': '14',
+      'manual_number': '5',
+      'declaration': 'declaration'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
       'financial_unit': 'financial_unit_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'net_amount_2': 'net_amount_2'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
       'statement': 'statement_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
     },
-    {
-      'document_number': '240014-222',
-      'document_date': 'document_date_2'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'sub_document_type': 'type_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'warehouse_name': '-',
-      'vendor_name': 'vendor_name'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'currency': 'currency_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'reference_number': '4',
-      'seller_invoice_number':
-          'seller_invoice_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'vendor_invoice_date':
-          'vendor_invoice_date'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'bill_lading_number':
-          'bill_lading_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'financial_unit': 'financial_unit_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'net_amount_2': 'net_amount_2'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'statement': 'statement_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-    },
-    {
-      'document_number': '240014-222',
-      'document_date': 'document_date_2'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'sub_document_type': 'type_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'warehouse_name': '-',
-      'vendor_name': 'vendor_name'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'currency': 'currency_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'reference_number': '13',
-      'seller_invoice_number':
-          'seller_invoice_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'vendor_invoice_date':
-          'vendor_invoice_date'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'bill_lading_number':
-          'bill_lading_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'financial_unit': 'financial_unit_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'net_amount_2': 'net_amount_2'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      'statement': 'statement_1'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-    },
+
   ];
 
   void onPressDown() {
@@ -137,26 +80,21 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
     rowsOnyxIx.clear();
 
     for (var data in rowData) {
-      rowsOnyxIx.add(OnyxIxRow(
-        cells: {
-          'check_box': OnyxIxCell(value: ''),
-          'document_number': OnyxIxCell(value: data['document_number']),
-          'document_date': OnyxIxCell(value: data['document_date']),
-          'sub_document_type': OnyxIxCell(value: data['sub_document_type']),
-          'warehouse_name': OnyxIxCell(value: data['warehouse_name']),
-          'vendor_name': OnyxIxCell(value: data['vendor_name']),
-          'currency': OnyxIxCell(value: data['currency']),
-          'reference_number': OnyxIxCell(value: data['reference_number']),
-          'seller_invoice_number':
-              OnyxIxCell(value: data['seller_invoice_number']),
-          'vendor_invoice_date': OnyxIxCell(value: data['vendor_invoice_date']),
-          'bill_lading_number': OnyxIxCell(value: data['bill_lading_number']),
-          'financial_unit': OnyxIxCell(value: data['financial_unit']),
-          'net_amount_2': OnyxIxCell(value: data['net_amount_2']),
-          'statement': OnyxIxCell(value: data['statement']),
-          'filters': OnyxIxCell(value: ''),
-        },
-      ));
+      rowsOnyxIx.add(
+        OnyxIxRow(
+          cells: {
+            'check_box': OnyxIxCell(value: ''),
+            'document_number': OnyxIxCell(value: data['document_number']),
+            'document_date': OnyxIxCell(value: data['document_date']),
+            'reference_number': OnyxIxCell(value: data['reference_number']),
+            'manual_number': OnyxIxCell(value: data['manual_number']),
+            'declaration': OnyxIxCell(value: data['declaration']),
+            'financial_unit': OnyxIxCell(value: data['financial_unit']),
+            'statement': OnyxIxCell(value: data['statement']),
+            'filters': OnyxIxCell(value: ''),
+          },
+        ),
+      );
     }
 
     // emit(InitPreviousIncomingStockOrderGridSuccess());
@@ -185,7 +123,7 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
       title: 'document_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
       fieldId: 'document_number',
       type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
+      width: OnyxIxGridSettings.minColumnWidth * 2.5,
       textAlign: OnyxIxColumnTextAlign.center,
       titleTextAlign: OnyxIxColumnTextAlign.center,
       backgroundColor: kSkyDarkColor,
@@ -196,30 +134,38 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
               ScreensEnt(
                 tabPath: AppPaths.previousIncomingStockOrderScreen,
                 screenName: 'request - ${rendererContext.cell.value.toString()}'
-                    .replaceRange(0, 'request'.length,
-                        'request'.tr(getIt<NavigationService>().navigatorKey.currentContext!)),
+                    .replaceRange(
+                      0,
+                      'request'.length,
+                      'request'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
+                    ),
                 tabName: 'request - ${rendererContext.cell.value.toString()}'
-                    .replaceRange(0, 'request'.length,
-                        'request'.tr(getIt<NavigationService>().navigatorKey.currentContext!)),
+                    .replaceRange(
+                      0,
+                      'request'.length,
+                      'request'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
+                    ),
                 screenPath: AppPaths.previousIncomingStockOrderScreen,
                 cubit: getIt<MaterialOrderReleaseCubit>(),
                 screenId: 5211,
                 sysNo: 40,
                 builder: (context, cubit) =>
                     BlocProvider<MaterialOrderReleaseCubit>.value(
-                  value: cubit as MaterialOrderReleaseCubit,
-                  child: const MaterialOrderReleaseScreen(),
-                ),
+                      value: cubit as MaterialOrderReleaseCubit,
+                      child: const MaterialOrderReleaseScreen(),
+                    ),
               ),
             );
           },
-          child: Text(rendererContext.cell.value.toString(),
-              textAlign: TextAlign.center,
-              style: AppTextStyles.styleRegular12(
-                getIt<NavigationService>().navigatorKey.currentContext!,
-                color: kSkyDarkColor,
-                underLine: true,
-              )),
+          child: Text(
+            rendererContext.cell.value.toString(),
+            textAlign: TextAlign.center,
+            style: AppTextStyles.styleRegular12(
+              getIt<NavigationService>().navigatorKey.currentContext!,
+              color: kSkyDarkColor,
+              underLine: true,
+            ),
+          ),
         );
       },
       enableContextMenu: false,
@@ -230,56 +176,7 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
       title: 'document_date'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
       fieldId: 'document_date',
       type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
-      textAlign: OnyxIxColumnTextAlign.center,
-      titleTextAlign: OnyxIxColumnTextAlign.center,
-      backgroundColor: kSkyDarkColor,
-      enableContextMenu: false,
-      enableDropToResize: false,
-      enableSorting: false,
-    ),
-    OnyxIxColumn(
-      title: 'sub_document_type'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      fieldId: 'sub_document_type',
-      type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
-      textAlign: OnyxIxColumnTextAlign.center,
-      titleTextAlign: OnyxIxColumnTextAlign.center,
-      backgroundColor: kSkyDarkColor,
-      enableContextMenu: false,
-      enableDropToResize: false,
-      enableSorting: false,
-    ),
-    OnyxIxColumn(
-      title:
-          'warehouse_name'.tr(getIt<NavigationService>().navigatorKey.currentContext!), // Warehouse Name
-      fieldId: 'warehouse_name',
-      type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
-      textAlign: OnyxIxColumnTextAlign.center,
-      titleTextAlign: OnyxIxColumnTextAlign.center,
-      backgroundColor: kSkyDarkColor,
-      enableContextMenu: false,
-      enableDropToResize: false,
-      enableSorting: false,
-    ),
-    OnyxIxColumn(
-      title: 'vendor_name'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      fieldId: 'vendor_name',
-      type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
-      textAlign: OnyxIxColumnTextAlign.center,
-      titleTextAlign: OnyxIxColumnTextAlign.center,
-      backgroundColor: kSkyDarkColor,
-      enableContextMenu: false,
-      enableDropToResize: false,
-      enableSorting: false,
-    ),
-    OnyxIxColumn(
-      title: 'currency'.tr(getIt<NavigationService>().navigatorKey.currentContext!), // Currency
-      fieldId: 'currency',
-      type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
+      width: OnyxIxGridSettings.minColumnWidth * 2.5,
       textAlign: OnyxIxColumnTextAlign.center,
       titleTextAlign: OnyxIxColumnTextAlign.center,
       backgroundColor: kSkyDarkColor,
@@ -291,7 +188,7 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
       title: 'reference_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
       fieldId: 'reference_number',
       type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
+      width: OnyxIxGridSettings.minColumnWidth * 2.5,
       textAlign: OnyxIxColumnTextAlign.center,
       titleTextAlign: OnyxIxColumnTextAlign.center,
       backgroundColor: kSkyDarkColor,
@@ -300,10 +197,12 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
       enableSorting: false,
     ),
     OnyxIxColumn(
-      title: 'seller_invoice_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      fieldId: 'seller_invoice_number',
+      title: 'manual_number'.tr(
+        getIt<NavigationService>().navigatorKey.currentContext!,
+      ), // Warehouse Name
+      fieldId: 'manual_number',
       type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
+      width: OnyxIxGridSettings.minColumnWidth * 2.5,
       textAlign: OnyxIxColumnTextAlign.center,
       titleTextAlign: OnyxIxColumnTextAlign.center,
       backgroundColor: kSkyDarkColor,
@@ -312,10 +211,10 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
       enableSorting: false,
     ),
     OnyxIxColumn(
-      title: 'vendor_invoice_date'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      fieldId: 'vendor_invoice_date',
+      title: 'declaration'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
+      fieldId: 'declaration',
       type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
+      width: OnyxIxGridSettings.minColumnWidth * 2.5,
       textAlign: OnyxIxColumnTextAlign.center,
       titleTextAlign: OnyxIxColumnTextAlign.center,
       backgroundColor: kSkyDarkColor,
@@ -324,35 +223,10 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
       enableSorting: false,
     ),
     OnyxIxColumn(
-      title: 'bill_lading_number'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
-      fieldId: 'bill_lading_number',
-      type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
-      textAlign: OnyxIxColumnTextAlign.center,
-      titleTextAlign: OnyxIxColumnTextAlign.center,
-      backgroundColor: kSkyDarkColor,
-      enableContextMenu: false,
-      enableDropToResize: false,
-      enableSorting: false,
-    ),
-    OnyxIxColumn(
-      title: 'statement'.tr(getIt<NavigationService>().navigatorKey.currentContext!), // Statement
-      fieldId: 'statement',
-      type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
-      textAlign: OnyxIxColumnTextAlign.center,
-      titleTextAlign: OnyxIxColumnTextAlign.center,
-      backgroundColor: kSkyDarkColor,
-      enableContextMenu: false,
-      enableDropToResize: false,
-      enableSorting: false,
-    ),
-    OnyxIxColumn(
-      title:
-          'financial_unit'.tr(getIt<NavigationService>().navigatorKey.currentContext!), // Financial Unit
+      title: 'financial_unit'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
       fieldId: 'financial_unit',
       type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
+      width: OnyxIxGridSettings.minColumnWidth * 2.5,
       textAlign: OnyxIxColumnTextAlign.center,
       titleTextAlign: OnyxIxColumnTextAlign.center,
       backgroundColor: kSkyDarkColor,
@@ -360,18 +234,9 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
       enableDropToResize: false,
       enableSorting: false,
     ),
-    OnyxIxColumn(
-      title: 'net_amount_2'.tr(getIt<NavigationService>().navigatorKey.currentContext!), // Phone Number
-      fieldId: 'net_amount_2',
-      type: OnyxIxColumnType.inputText(),
-      width: OnyxIxGridSettings.minColumnWidth * 2,
-      textAlign: OnyxIxColumnTextAlign.center,
-      titleTextAlign: OnyxIxColumnTextAlign.center,
-      backgroundColor: kSkyDarkColor,
-      enableContextMenu: false,
-      enableDropToResize: false,
-      enableSorting: false,
-    ),
+
+
+  
     OnyxIxColumn(
       title: '',
       fieldId: 'filters',
@@ -388,14 +253,13 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
       enableHideColumnMenuItem: false,
       enableSetColumnsMenuItem: false,
       enableSorting: false,
-      titleSpan: const TextSpan(children: [
-        WidgetSpan(
-            child: Icon(
-          FontAwesomeIcons.sliders,
-          size: 12,
-          color: whiteColor,
-        )),
-      ]),
+      titleSpan: const TextSpan(
+        children: [
+          WidgetSpan(
+            child: Icon(FontAwesomeIcons.sliders, size: 12, color: whiteColor),
+          ),
+        ],
+      ),
       renderer: (rendererContext) {
         return const Text('');
       },
@@ -429,8 +293,9 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
 
   void changeOnlyNotCancelledCheckBoxMultipleTransfer(bool val) {
     onlyNotCancelledCheckBox = val;
-    emit(state.copyWith(
-        onlyNotCancelledCheckBox: !state.onlyNotCancelledCheckBox));
+    emit(
+      state.copyWith(onlyNotCancelledCheckBox: !state.onlyNotCancelledCheckBox),
+    );
   }
 
   void onChangedOnyxIx(OnyxIxGridOnChangedEvent event) {
@@ -556,9 +421,11 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
   changeSelectCurrentTab(int index) {
     emit(state.copyWith(selectCurrentTab: index));
   }
+
   changeSelectCurrentTab2(int index) {
     emit(state.copyWith(selectCurrentTab2: index));
   }
+
   @override
   Future<void> close() {
     yearController.dispose();
