@@ -86,7 +86,7 @@ class TabMainMaterialReturnBody extends StatelessWidget {
                     CustomTextFieldPurchase(
                       hint: 'تاريخ أمر الانتاج'.tr(context),
                       isRequired: false,
-                      fillColor: kGrayIX,
+                      fillColor: kColapsColor,
                     ),
                     CustomTextFieldPurchase(
                       hint: 'رقم وثيقة حركة صرف المواد'.tr(context),
@@ -95,11 +95,21 @@ class TabMainMaterialReturnBody extends StatelessWidget {
                     CustomTextFieldPurchase(
                       hint: 'تاريخ الصرف'.tr(context),
                       isRequired: false,
-                      fillColor: kGrayIX,
+                      fillColor: kColapsColor,
                     ),
                     CustomTextFieldPurchase(
                       hint: 'سعر تحويل المخزون'.tr(context),
                       isRequired: true,
+                    ),
+                    CustomTextFieldPurchase(
+                      hint: 'رقم المنتج'.tr(context),
+                      isRequired: false,
+                      fillColor: kColapsColor,
+                    ),
+                    CustomTextFieldPurchase(
+                      hint: 'وحدة القياس'.tr(context),
+                      isRequired: false,
+                      fillColor: kColapsColor,
                     ),
                     CustomDropDownWithSearch(
                       hint: 'سبب المرتجع'.tr(context),
@@ -114,16 +124,7 @@ class TabMainMaterialReturnBody extends StatelessWidget {
                         context,
                       ).subDocumentTypeList,
                     ),
-                    CustomTextFieldPurchase(
-                      hint: 'رقم المنتج'.tr(context),
-                      isRequired: false,
-                      fillColor: kGrayIX,
-                    ),
-                    CustomTextFieldPurchase(
-                      hint: 'وحدة القياس'.tr(context),
-                      isRequired: false,
-                      fillColor: kGrayIX,
-                    ),
+                    
                   ],
                 ),
                 const HSpacer(10),
@@ -173,7 +174,7 @@ class TabMainMaterialReturnBody extends StatelessWidget {
                   itemTile: "more_data".tr(context),
                   useTitle: true,
                   backgroundColor: whiteColor,
-                  collapsedBackgroundColor: kGrayIX,
+                  collapsedBackgroundColor: dividerColor,
                   txtColor: kTextColor,
                   iconColor: kTextFiledColor,
                 ),

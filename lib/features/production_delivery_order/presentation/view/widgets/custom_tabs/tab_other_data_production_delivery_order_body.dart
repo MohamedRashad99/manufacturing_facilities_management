@@ -25,26 +25,30 @@ class TabOtherDataProductionDeliveryOrderBody extends StatelessWidget {
                   children: [
                     // year
                     CustomDropDownWithSearch(
-                      hint: 'تصنيف أمر الإنتاج'.tr(context),
+                      hint: 'hint_document_type'.tr(context),
                       isRequired: false,
                       selectedItem: state.unitValue,
                       list: BlocProvider.of<ProductionDeliveryOrderCubit>(
                         context,
                       ).subDocumentTypeList,
                     ),
-                    CustomTextFieldPurchase(
-                      hint: 'الرقم اليدوي'.tr(context),
-                      isRequired: false,
-                      fillColor: whiteColor,
-                    ),
-                    CustomTextFieldPurchase(
-                      hint: 'عدد مرات المرفقات'.tr(context),
-                      isRequired: false,
-                      fillColor: whiteColor,
-                    ),
-                    // financial unit
                     CustomDropDownWithSearch(
-                      hint: 'الموضف المسؤول'.tr(context),
+                      hint: 'hint_reference_document_number'.tr(context),
+                      isRequired: false,
+                      selectedItem: state.unitValue,
+                      list: BlocProvider.of<ProductionDeliveryOrderCubit>(
+                        context,
+                      ).subDocumentTypeList,
+                    ),
+                    
+                 
+                    CustomTextFieldPurchase(
+                      hint: 'hint_reference_document_date'.tr(context),
+                      isRequired: false,
+                      fillColor: kColapsColor,
+                    ),
+                    CustomDropDownWithSearch(
+                      hint: 'document_type'.tr(context),
                       isRequired: false,
                       selectedItem: state.unitValue,
                       list: BlocProvider.of<ProductionDeliveryOrderCubit>(
@@ -52,20 +56,11 @@ class TabOtherDataProductionDeliveryOrderBody extends StatelessWidget {
                       ).subDocumentTypeList,
                     ),
                     CustomTextFieldPurchase(
-                      hint: 'نوع الوثيقة المرجعية'.tr(context),
+                      hint: 'kind'.tr(context),
                       isRequired: false,
-                      fillColor: whiteColor,
+                      fillColor: kColapsColor,
                     ),
-                    CustomTextFieldPurchase(
-                      hint: 'رقم الوثيقة المرجعية'.tr(context),
-                      isRequired: false,
-                      fillColor: whiteColor,
-                    ),
-                    // sub document type
-                    CustomTextFieldPurchase(
-                      hint: 'رقم وثيقة احتساب التكلفة المعيارية'.tr(context),
-                      isRequired: false,
-                    ),
+                   
                   ],
                 ),
 

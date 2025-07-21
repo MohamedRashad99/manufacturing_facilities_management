@@ -78,12 +78,12 @@ class TabMainMaterialOrderReleaseBody extends StatelessWidget {
                     CustomTextFieldPurchase(
                       hint: 'رقم المنتج'.tr(context),
                       isRequired: false,
-                      fillColor: kGrayIX,
+                      fillColor: kColapsColor,
                     ),
                     CustomTextFieldPurchase(
                       hint: 'وحدة القياس'.tr(context),
                       isRequired: false,
-                      fillColor: kGrayIX,
+                      fillColor: kColapsColor,
                     ),
                     CustomDropDownWithSearch(
                       hint: 'سعر تحويل المخزون'.tr(context),
@@ -100,7 +100,7 @@ class TabMainMaterialOrderReleaseBody extends StatelessWidget {
                   width: context.width,
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: kGrayIX,
+                    color: kColapsColor,
                     borderRadius: BorderRadius.circular(2),
                   ),
                   child: Column(
@@ -115,12 +115,12 @@ class TabMainMaterialOrderReleaseBody extends StatelessWidget {
                           CustomTextFieldPurchase(
                             hint: 'كمية أمر المنتج'.tr(context),
                             isRequired: false,
-                            fillColor: kGrayIX,
+                            fillColor: kColapsColor,
                           ),
                           CustomTextFieldPurchase(
                             hint: 'الكمية المصروف سابقا'.tr(context),
                             isRequired: false,
-                            fillColor: kGrayIX,
+                            fillColor: kColapsColor,
                           ),
 
                           CustomTextFieldPurchase(
@@ -130,12 +130,12 @@ class TabMainMaterialOrderReleaseBody extends StatelessWidget {
                           CustomTextFieldPurchase(
                             hint: 'نوع الوثيقة المرجعية'.tr(context),
                             isRequired: false,
-                            fillColor: kGrayIX,
+                            fillColor: kColapsColor,
                           ),
                           CustomTextFieldPurchase(
                             hint: 'رقم الوثيقة المرجعية'.tr(context),
                             isRequired: false,
-                            fillColor: kGrayIX,
+                            fillColor: kColapsColor,
                           ),
                         ],
                       ),

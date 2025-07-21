@@ -27,7 +27,7 @@ class TabMainProductionDeliveryOrderBody extends StatelessWidget {
                     CustomTextFieldPurchase(
                       hint: 'year'.tr(context),
                       isRequired: true,
-                      fillColor: whiteColor,
+                      fillColor: kColapsColor,
                     ),
                     CustomDropDownWithSearch(
                       hint: 'financial_unit'.tr(context),
@@ -75,14 +75,19 @@ class TabMainProductionDeliveryOrderBody extends StatelessWidget {
                       ).subDocumentTypeList,
                     ),
                     CustomTextFieldPurchase(
+                      hint: 'تاريخ أمر الإنتاج   '.tr(context),
+                      isRequired: false,
+                      fillColor: kColapsColor,
+                    ),
+                    CustomTextFieldPurchase(
                       hint: 'رقم المنتج'.tr(context),
                       isRequired: false,
-                      fillColor: kGrayIX,
+                      fillColor: kColapsColor,
                     ),
                     CustomTextFieldPurchase(
                       hint: 'وحدة القياس'.tr(context),
                       isRequired: false,
-                      fillColor: kGrayIX,
+                      fillColor: kColapsColor,
                     ),
                     CustomDropDownWithSearch(
                       hint: 'سعر تحويل المخزون'.tr(context),
@@ -92,65 +97,40 @@ class TabMainProductionDeliveryOrderBody extends StatelessWidget {
                         context,
                       ).subDocumentTypeList,
                     ),
+                    CustomDropDownWithSearch(
+                      hint: 'نوع التكلفة عند التسليم'.tr(context),
+                      isRequired: true,
+                      fillColor: kColapsColor,
+                      selectedItem: state.unitValue,
+                      list: BlocProvider.of<ProductionDeliveryOrderCubit>(
+                        context,
+                      ).subDocumentTypeList,
+                    ),
                   ],
                 ),
-                const HSpacer(10),
-                Container(
-                  width: context.width,
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: kGrayIX,
-                    borderRadius: BorderRadius.circular(2),
-                  ),
-                  child: Column(
-                    children: [
-                      FlexibleWrapWidget(
-                        itemWidth: context.getWidth(
-                          ratioDesktop: 0.13,
-                          ratioMobile: 0.9,
-                          ratioTablet: 0.3,
-                        ),
-                        children: [
-                          CustomTextFieldPurchase(
-                            hint: 'كمية أمر المنتج'.tr(context),
-                            isRequired: false,
-                            fillColor: kGrayIX,
-                          ),
-                          CustomTextFieldPurchase(
-                            hint: 'الكمية المصروف سابقا'.tr(context),
-                            isRequired: false,
-                            fillColor: kGrayIX,
-                          ),
-
-                          CustomTextFieldPurchase(
-                            hint: 'الكمية المطلوبة للصرف'.tr(context),
-                            isRequired: true,
-                          ),
-                          CustomTextFieldPurchase(
-                            hint: 'نوع الوثيقة المرجعية'.tr(context),
-                            isRequired: false,
-                            fillColor: kGrayIX,
-                          ),
-                          CustomTextFieldPurchase(
-                            hint: 'رقم الوثيقة المرجعية'.tr(context),
-                            isRequired: false,
-                            fillColor: kGrayIX,
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                const HSpacer(10),
+               const HSpacer(10),
                 CustomTextFieldPurchase(
-                  hint: 'سبب الصرف'.tr(context),
-                  isRequired: true,
+                  hint: 'الملاحظات'.tr(context),
+                  isRequired: false,
                   width: context.getWidth(
                     ratioDesktop: 4,
                     ratioMobile: 0.9,
                     ratioTablet: 0.3,
                   ),
                 ),
+                const HSpacer(10),
+                Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              TitleCheckBox(
+                                title: "تسليم اخر دفعة".tr(
+                                  context,
+                                ),
+                                onChanged: (field, value, String? tblNm) {},
+                              ),
+                             
+                            ],
+                          ),
                 const HSpacer(10),
                 DrawerItems(
                   menuItems: [
@@ -184,26 +164,28 @@ class TabMainProductionDeliveryOrderBody extends StatelessWidget {
                                 isRequired: false,
                               ),
                               CustomTextFieldPurchase(
-                                hint: 'الملاحظات'.tr(context),
+                                hint: 'كمية إمر الإنتاج'.tr(context),
+                                fillColor: kColapsColor,
+                                isRequired: false,
+                              ),
+                               CustomTextFieldPurchase(
+                                hint: ' كمية الإنتاج الفعلي'.tr(context),
+                                fillColor: kColapsColor,
+                                isRequired: false,
+                              ),
+                               CustomTextFieldPurchase(
+                                hint: ' الكمية السليمة المنتجة'.tr(context),
+                                fillColor: kColapsColor,
+                                isRequired: false,
+                              ),
+                               CustomTextFieldPurchase(
+                                hint: ' الكمية المسلمة'.tr(context),
+                                fillColor: kColapsColor,
                                 isRequired: false,
                               ),
                             ],
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              TitleCheckBox(
-                                title: "صرف فوارق الاستهلاك عن المصروف".tr(
-                                  context,
-                                ),
-                                onChanged: (field, value, String? tblNm) {},
-                              ),
-                              TitleCheckBox(
-                                title: "صرف مرتجع نظام الجودة".tr(context),
-                                onChanged: (field, value, String? tblNm) {},
-                              ),
-                            ],
-                          ),
+                          
                         ],
                       ),
                     ),
@@ -211,7 +193,7 @@ class TabMainProductionDeliveryOrderBody extends StatelessWidget {
                   itemTile: "more_data".tr(context),
                   useTitle: true,
                   backgroundColor: whiteColor,
-                  collapsedBackgroundColor: kGrayIX,
+                  collapsedBackgroundColor: dividerColor,
                   txtColor: kTextColor,
                   iconColor: kTextFiledColor,
                 ),
@@ -225,12 +207,12 @@ class TabMainProductionDeliveryOrderBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomTextIconButton(
-              title: 'إنزال المواد'.tr(context),
+              title: 'إنزال المنتجات'.tr(context),
               // icon: FontAwesomeIcons.addressCard,
               txtColor: whiteColor,
               // iconColor: whiteColor,
               bgColor: homeButtonColor,
-              width: 110,
+              width: 120,
               height: 35,
               onPressed: () {
                 // Utils.customOpenPopUpDialog(

@@ -81,7 +81,7 @@ class TabFromIssueProductionOrdersBody extends StatelessWidget {
                       txtColor: whiteColor,
                       iconColor: whiteColor,
                       bgColor: homeButtonColor,
-                      width: 110,
+                      width: 270,
                       height: 35,
                       onPressed: () {
                         Utils.customOpenPopUpDialog(

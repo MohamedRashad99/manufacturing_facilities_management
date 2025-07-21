@@ -41,19 +41,19 @@ class DetailsProductionDeliveryOrder extends StatelessWidget {
                               context.activeTabsCubit.addActiveTab(
                                 ScreensEnt(
                                   tabPath:
-                                      'AppPaths.newmaterialOrderReleaseScreen',
+                                      AppPaths.newProductionDeliveryOrder,
                                   screenName: 'material_order_release'.tr(
                                     context,
                                   ),
-                                  tabName: 'all_material_order_release'.tr(
+                                  tabName: 'all_production_delivery_order'.tr(
                                     context,
                                   ),
                                   screenPath:
-                                      'AppPaths.newmaterialOrderReleaseScreen',
+                                      AppPaths.newProductionDeliveryOrder,
                                   isAllPrevScreen: false,
                                   isNewItmScreen: true,
                                   cubit: getIt<ProductionDeliveryOrderCubit>(),
-                                  screenId: 11585,
+                                  screenId: 11591,
                                   sysNo: 73,
                                   builder: (context, cubit) =>
                                       BlocProvider<
