@@ -13,6 +13,8 @@ class MfsGetCubitAndBuilder {
         return getIt<MaterialOrderReleaseCubit>();
       case (11589, true):
         return getIt<MaterialReturnCubit>();
+      case (11591, true):
+        return getIt<ProductionDeliveryOrderCubit>();
 
       default:
         return getIt<DefaultErrorPageCubit>();
@@ -64,6 +66,18 @@ class MfsGetCubitAndBuilder {
           return (context, cubit) => BlocProvider<MaterialReturnCubit>.value(
             value: cubit as MaterialReturnCubit,
             child: const MaterialReturnScreen(),
+          );
+        }
+      case (11591, true):
+        if (screensEnt.isAllPrevScreen) {
+          return (context, cubit) => BlocProvider<ProductionDeliveryOrderCubit>.value(
+            value: cubit as ProductionDeliveryOrderCubit,
+            child: const AllProductionDeliveryOrderScreen(),
+          );
+        } else {
+          return (context, cubit) => BlocProvider<ProductionDeliveryOrderCubit>.value(
+            value: cubit as ProductionDeliveryOrderCubit,
+            child: const ProductionDeliveryOrderScreen(),
           );
         }
 

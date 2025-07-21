@@ -15,5 +15,9 @@ class MfsInitGetIt {
 
     /// ✨ <<<--------------------- Material Return  ----------------------->>>
     getIt.registerFactory<MaterialReturnCubit>(() => MaterialReturnCubit());
+
+    /// ✨ <<<--------------------- Production Delivery Order  ----------------------->>>
+    getIt.registerFactory<ProductionDeliveryOrderCubit>(() => ProductionDeliveryOrderCubit());
+
   }
 }
