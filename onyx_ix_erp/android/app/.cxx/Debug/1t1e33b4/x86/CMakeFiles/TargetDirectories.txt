@@ -1,0 +1,2 @@
+D:/tt/onyx_erp/android/app/.cxx/Debug/1t1e33b4/x86/CMakeFiles/edit_cache.dir
+D:/tt/onyx_erp/android/app/.cxx/Debug/1t1e33b4/x86/CMakeFiles/rebuild_cache.dir

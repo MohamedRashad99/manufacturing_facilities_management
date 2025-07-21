@@ -45,11 +45,11 @@ class DetailsMaterialOrderRelease extends StatelessWidget {
                               context.activeTabsCubit.addActiveTab(
                                 ScreensEnt(
                                   tabPath:
-                                      AppPaths.newmaterialOrderReleaseScreen,
+                                      'AppPaths.newmaterialOrderReleaseScreen',
                                   screenName: 'material_order_release'.tr(context),
                               tabName: 'all_material_order_release'.tr(context),
                                   screenPath:
-                                      AppPaths.newmaterialOrderReleaseScreen,
+                                      'AppPaths.newmaterialOrderReleaseScreen',
                                   isAllPrevScreen: false,
                                   isNewItmScreen: true,
                                   cubit: getIt<MaterialOrderReleaseCubit>(),

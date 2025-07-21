@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "966646723994",
+    "project_id": "onix-ix",
+    "storage_bucket": "onix-ix.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966646723994:android:127388580026d153553623",
+        "android_client_info": {
+          "package_name": "com.example.onyx_ix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqeIjkAmFsf0AmGPRlIMjsQIPrGnN9cUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

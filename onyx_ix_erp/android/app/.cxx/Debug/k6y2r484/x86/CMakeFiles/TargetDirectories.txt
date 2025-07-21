@@ -1,0 +1,2 @@
+C:/Users/HP/AndroidStudioProjects/onix_erp/android/app/.cxx/Debug/k6y2r484/x86/CMakeFiles/edit_cache.dir
+C:/Users/HP/AndroidStudioProjects/onix_erp/android/app/.cxx/Debug/k6y2r484/x86/CMakeFiles/rebuild_cache.dir

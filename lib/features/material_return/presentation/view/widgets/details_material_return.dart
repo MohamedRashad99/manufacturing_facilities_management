@@ -37,10 +37,10 @@ class DetailsMaterialReturn extends StatelessWidget {
                         addNewOnPressed: () {
                           context.activeTabsCubit.addActiveTab(
                             ScreensEnt(
-                              tabPath: AppPaths.newmaterialReturnScreen,
+                              tabPath: 'AppPaths.newmaterialReturnScreen',
                               screenName: 'material_return'.tr(context),
                               tabName: 'all_material_return'.tr(context),
-                              screenPath: AppPaths.newmaterialReturnScreen,
+                              screenPath: 'AppPaths.newmaterialReturnScreen',
                               isAllPrevScreen: false,
                               isNewItmScreen: true,
                               cubit: getIt<MaterialReturnCubit>(),

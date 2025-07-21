@@ -45,7 +45,7 @@ class DetailsIssueProductionOrders extends StatelessWidget {
                               context.activeTabsCubit.addActiveTab(
                                 ScreensEnt(
                                   tabPath:
-                                      AppPaths.newIssueProductionOrdersScreen,
+                                      'AppPaths.newIssueProductionOrdersScreen',
                                   screenName: 'issue_production_orders'.tr(
                                     context,
                                   ),
@@ -53,7 +53,7 @@ class DetailsIssueProductionOrders extends StatelessWidget {
                                     context,
                                   ),
                                   screenPath:
-                                      AppPaths.newIssueProductionOrdersScreen,
+                                      'AppPaths.newIssueProductionOrdersScreen',
                                   isAllPrevScreen: false,
                                   isNewItmScreen: true,
                                   cubit: getIt<IssueProductionOrdersCubit>(),
