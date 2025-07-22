@@ -236,4 +236,19 @@ class AppPaths {
   static const allBeneficiaryDataScreen = '/CSM/ARS/beneficariesdetails/list';
   static const newbeneficiaryDataScreen = '/CSM/ARS/beneficariesdetails/new';
   // static const previousBeneficiaryDataScreen = '/previousBeneficiaryDataScreen';
+
+    //material_order_release
+  static const newmaterialOrderReleaseScreen = '/MFS/MRP/materialorderrelease/new';
+  static const allMaterialOrderReleaseScreen = '/MFS/MRP/materialorderrelease/list';
+  static const previousMaterialOrderReleaseScreen = '/MFS/MRP/issueproductionorders/prev';
+
+  //material_return
+  static const newmaterialReturnScreen = '/MFS/MRP/materialreturn/new';
+  static const allMaterialReturnScreen = '/MFS/MRP/materialreturn/list';
+  static const previousMaterialReturnScreen = '/MFS/MRP/materialreturn/';
+
+   /// Issue Production Orders
+  static const allIssueProductionOrdersScreen = '/MFS/MRP/issueproductionorders/list';
+  static const issueProductionOrdersScreen = '/MFS/MRP/issueproductionorders/prev';
+  static const newIssueProductionOrdersScreen = '/MFS/MRP/issueproductionorders/new';
 } 
