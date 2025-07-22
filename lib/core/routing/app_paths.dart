@@ -251,4 +251,9 @@ class AppPaths {
   static const allIssueProductionOrdersScreen = '/MFS/MRP/issueproductionorders/list';
   static const issueProductionOrdersScreen = '/MFS/MRP/issueproductionorders/prev';
   static const newIssueProductionOrdersScreen = '/MFS/MRP/issueproductionorders/new';
+
+   /// Issue Production Orders
+  static const allProductionDeliveryOrderScreen = '/MFS/MRP/productiondelivery/list';
+  static const productionDeliveryOrderScreen = '/MFS/MRP/productiondelivery/prev';
+  static const newProductionDeliveryOrderScreen = '/MFS/MRP/productiondelivery/new';
 } 
