@@ -145,10 +145,10 @@ class MaterialOrderReleaseCubit extends Cubit<MaterialOrderReleaseState> {
                       'request'.length,
                       'request'.tr(getIt<NavigationService>().navigatorKey.currentContext!),
                     ),
-                screenPath: AppPaths.previousIncomingStockOrderScreen,
+                screenPath: AppPaths.newmaterialOrderReleaseScreen,
                 cubit: getIt<MaterialOrderReleaseCubit>(),
-                screenId: 5211,
-                sysNo: 40,
+                screenId: 11585,
+                sysNo: 73,
                 builder: (context, cubit) =>
                     BlocProvider<MaterialOrderReleaseCubit>.value(
                       value: cubit as MaterialOrderReleaseCubit,

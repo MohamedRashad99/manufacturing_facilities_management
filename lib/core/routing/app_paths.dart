@@ -1,4 +1,4 @@
-class AppPaths {
+class AppPath {
   static const splash = '/';
   static const splashTwo = '/splash';
   static const landing = '/landing';
