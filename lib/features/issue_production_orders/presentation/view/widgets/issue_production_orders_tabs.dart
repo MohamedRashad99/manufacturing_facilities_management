@@ -37,7 +37,7 @@ class IssueProductionOrdersTabs extends StatelessWidget {
                         },
                       ),
                       SelectTabButton(
-                        title: 'linking_subdirectories'.tr(context),
+                        title: 'ربط الأدلة الفرعية'.tr(context),
                         isActive: state.selectCurrentTab == 2,
                         onTap: () {
                           _onTap(context, index: 2);

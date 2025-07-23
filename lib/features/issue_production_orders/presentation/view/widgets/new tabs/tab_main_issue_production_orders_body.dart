@@ -68,7 +68,7 @@ class TabMainIssueProductionOrdersBody extends StatelessWidget {
 
                     // financial unit
                     CustomDropDownWithSearch(
-                      hint: 'product_number'.tr(context),
+                      hint: 'رقم المنتج'.tr(context),
                       isRequired: true,
                       selectedItem: state.unitValue,
                       list: BlocProvider.of<IssueProductionOrdersCubit>(
