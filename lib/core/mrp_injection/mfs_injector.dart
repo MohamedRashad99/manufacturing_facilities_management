@@ -18,6 +18,5 @@ class MfsInitGetIt {
 
     /// ✨ <<<--------------------- Production Delivery Order  ----------------------->>>
     getIt.registerFactory<ProductionDeliveryOrderCubit>(() => ProductionDeliveryOrderCubit());
-
   }
 }
