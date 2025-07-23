@@ -5,7 +5,6 @@ class MfsGetCubitAndBuilder {
 
   /// Fetch cubit based on screen ID, checking Firebase Remote Config for availability.
   static dynamic getCubit({required ScreensEnt screensEnt, bool show = true}) {
-    AppLogs.debugLog("screenId=========>${screensEnt.screenId}");
     switch ((screensEnt.screenId, show)) {
       case (11533, true):
         return getIt<IssueProductionOrdersCubit>();
@@ -26,7 +25,6 @@ class MfsGetCubitAndBuilder {
     required ScreensEnt screensEnt,
     bool show = true,
   }) {
-    AppLogs.debugLog("HERE=======>${screensEnt.screenId}:::::$show");
     switch ((screensEnt.screenId, show)) {
       case (11533, true):
         if (screensEnt.isAllPrevScreen) {
